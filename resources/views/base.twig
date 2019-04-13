@@ -1,23 +1,39 @@
-{% include 'header/index.twig' %}
+<!doctype html>
+<html class="no-js" {{site.language_attributes}}>
+{% include 'components/_head.twig' %}
 
-<section class="section">
-  <div class="container">
-    <div class="columns">
+<body class="{{ body_class }}">
+  <div class="pageloader is-active"></div>
 
-      <div class="column is-7">
-        {% block content %}
-          {{ messages.base.no_content }}
-        {% endblock %}
-      </div>
-
-      <aside class="column is-4 is-offset-1">
-        {{ main_sidebar }}
-      </aside>
-
+  {% if not in_production %}
+    <div class="current-template-file-name">
+      {{ current_template_file }}
     </div>
-  </div>
-</section>
+  {% endif %}
 
-{% include 'footer/index.twig' %}
+  <header>
+    <div class="container">
+      {% include "components/navbar/index.twig" %}
+    </div>
+  </header>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns">
 
+        <div class="column is-7">
+          {% block content %}
+            {{ messages.base.no_content }}
+          {% endblock %}
+        </div>
+
+        <aside class="column is-4 is-offset-1">
+          {{ main_sidebar }}
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  {{ function('wp_footer') }}</body>
+</html>
