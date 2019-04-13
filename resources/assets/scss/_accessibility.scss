@@ -1,0 +1,64 @@
+@mixin outline {
+  @include outline-core();
+}
+
+@mixin outline-inverted {
+  @include outline-core(true);
+}
+
+/**
+ * Outline management, with CSS polyfill for :focus-visible
+ *
+ * @param   {boolean}  $inverted:  Are we asking for the inverted variant of the outline
+ *
+ * @return  {void}
+ */
+@mixin outline-core($inverted: false) {
+  &:focus {
+    @if ($inverted) {
+      outline: $outline-inverted;
+    } @else {
+      outline: $outline-default;
+    }
+    outline-offset: $size-demi;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@mixin sr-only {
+  position: absolute;
+  height: 1px;
+  padding: 0;
+  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin sr-only-focusable {
+  @include outline-inverted;
+
+  &:active,
+  &:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: auto;
+    margin: $size-demi;
+    padding: $size-base $size-large;
+    width: auto;
+    background: $color-raccoon;
+    color: $color-white;
+    clip: auto;
+    outline-offset: initial;
+    overflow: visible;
+    transition: none;
+    white-space: normal;
+    z-index: 50;
+  }
+}

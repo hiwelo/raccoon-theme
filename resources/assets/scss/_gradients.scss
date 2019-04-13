@@ -1,0 +1,17 @@
+$gradientRaccoon: linear-gradient(to left, $color-gray-900, $color-gray-700);
+
+@mixin gradientText {
+  @supports (-webkit-background-clip: text) {
+    background: $gradientRaccoon;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@mixin gradientBackground {
+  background: $color-raccoon;
+
+  @supports (background: $gradientRaccoon) {
+    background: $gradientRaccoon;
+  }
+}

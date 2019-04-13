@@ -1,0 +1,19 @@
+.branding {
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-right: $size-full;
+    padding: $size-medium;
+    width: $size-extra;
+
+    @media (min-width: $media-tablet) {
+      width: $size-extra-plus;
+    }
+  }
+
+  &__logo {
+    height: auto;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}

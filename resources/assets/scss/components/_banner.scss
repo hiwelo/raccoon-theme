@@ -1,0 +1,28 @@
+/**
+ * Banner component
+ */
+
+.banner {
+  padding: $size-large 0;
+  background-color: $color-raccoon;
+  color: $color-white;
+
+  @supports (clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%)) {
+    & {
+      position: relative;
+      margin-bottom: $size-larger;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      display: block;
+      height: $size-large;
+      content: "";
+      background-color: $color-raccoon;
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    }
+  }
+}

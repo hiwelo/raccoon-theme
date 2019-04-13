@@ -1,0 +1,27 @@
+/**
+ * Reset HTML size to use 1rem = 10px
+ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/**
+ * Style for the dev helper indicating what is the current template
+ */
+.current-template-file-name {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #1c1e26;
+  color: #e3b28e;
+  padding: 0.2rem 2rem;
+  z-index: 10000;
+  border-radius: 0.5rem 0 0 0;
+}

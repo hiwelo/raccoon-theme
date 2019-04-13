@@ -1,0 +1,70 @@
+$color-raccoon: #333333;
+$color-gray-900: #161616;
+$color-gray-800: #444444;
+$color-gray-700: #555555;
+$color-gray-600: #888888;
+$color-gray-400: #cccccc;
+$color-gray-300: #dddddd;
+$color-gray-200: #eeeeee;
+$color-gray-100: #f5f5f5;
+$color-gray-50: #fafafa;
+
+$color-raccoon-blue: #0b486b;
+$color-raccoon-turquoise: #3b8686;
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-inverted: $color-white;
+
+$container-size-desktop: 1280px;
+$container-size-laptop: 1024px;
+$container-size-tablet: 85%;
+
+$font-size-small: 1.2rem;
+$font-size-footer: 1.4rem;
+$font-size-default: 1.6rem;
+$font-size-navigation: 1.8rem;
+$font-size-subtitle: 2.4rem;
+$font-size-title: 3.2rem;
+$font-size-oversized: 4rem;
+$font-size-hero-intro: 4.8rem;
+$font-size-hero-title: $font-size-oversized;
+$font-size-giant: 6.4rem;
+
+$font-weight-lighter: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$hero-image-height: 240px;
+$hero-minheight-desktop: 720px; /* previously 165% */
+
+$lineheight-title: 1.15;
+
+$media-desktop: 1280px;
+$media-laptop: 1024px;
+$media-tablet: 640px;
+
+$outline-default: 0.2rem dashed $color-raccoon;
+$outline-inverted: 0.2rem dashed $color-white;
+
+$paragraph-footer: 400px;
+$paragraph-max-width: 560px;
+
+$size-unit: 0.1rem;
+$size-double: 0.2rem;
+$size-demi: 0.4rem;
+$size-base: 0.8rem;
+$size-decimal: 1rem;
+$size-small: 1.2rem;
+$size-medium: 1.6rem;
+$size-medium-large: 2.4rem;
+$size-large: 3.2rem;
+$size-full: 4rem;
+$size-larger: 4.8rem;
+$size-xlarge: 5.6rem;
+$size-xxlarge: 6.4rem;
+$size-extra: 8rem;
+$size-extra-plus: 12rem;
+$size-oversized: 16rem;
