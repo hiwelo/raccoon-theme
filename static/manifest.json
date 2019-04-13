@@ -1,10 +1,10 @@
 {
-  "admin.css": "css/admin.e74e154c6f112a1edbc2.css",
-  "login.css": "css/login.f3f50f65f186ad0e5104.css",
-  "scripts.js": "js/scripts.5917f3ce772a32a66808.js",
-  "styles.css": "css/styles.f66a2cb17051ad0bb9c1.css",
-  "vendor.js": "js/vendor.2a26a2bb7f03ce260785.js",
-  "fonts/main.sass": "fonts/fontawesome-webfont.fee66e7.woff",
+  "admin.css": "css/admin.css",
+  "login.css": "css/login.css",
+  "scripts.js": "js/scripts.js",
+  "styles.css": "css/styles.css",
+  "vendor.js": "js/vendor.js",
+  "fonts/main.scss": "fonts/fontawesome-webfont.fee66e7.woff",
   "images/login.sass": "images/base-camp-logo.png",
-  "images/main.sass": "images/fontawesome-webfont.svg"
+  "images/main.scss": "images/fontawesome-webfont.svg"
 }
