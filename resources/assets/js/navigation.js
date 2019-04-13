@@ -1,11 +1,30 @@
 const Navigation = (() => {
   const plugin = {};
 
-  const defaults = {
+  let defaults = {
     attributes: {
       trigger: 'data-navigation-trigger',
       currentStatus: 'aria-expanded',
     },
+  };
+
+  const eventListeners = () => {
+    const selector = `[${defaults.attributes.currentStatus}]`;
+    const navigationTriggers = document.querySelectorAll(selector);
+
+    navigationTriggers.onClick((e) => {
+      console.log(e);
+    });
+  };
+
+  const extendDefaults = (options) => {
+    options.forEach((property) => {
+      if (Object.prototype.hasOwnProperty.call(options, property)) {
+        defaults[property] = options[property];
+      }
+    });
+
+    return defaults;
   };
 
   const triggerCurrentStatus = (element) => {
@@ -19,7 +38,7 @@ const Navigation = (() => {
   const triggerNavigation = (element) => {
     const currentStatus = triggerCurrentStatus(element);
 
-    if (currentStatus === 'true') {
+    if (!currentStatus) {
       element.setAttribute(defaults.attributes.currentStatus, 'false');
       return;
     }
@@ -27,29 +46,8 @@ const Navigation = (() => {
     element.setAttribute(defaults.attributes.currentStatus, 'true');
   };
 
-  const focusManagement = (element) => {
-    const currentStatus = triggerCurrentStatus(element);
-
-    if (currentStatus === 'false') {
-      element.focus();
-    }
-
-    element.nextElementSibling.firstElementChild.focus();
-  };
-
-  const eventListeners = () => {
-    const selector = `[${defaults.attributes.currentStatus}]`;
-    const navigationTriggers = document.querySelectorAll(selector);
-
-    navigationTriggers.forEach((item) => {
-      item.addEventListener('click', () => {
-        triggerNavigation(item);
-        focusManagement(item);
-      });
-    });
-  };
-
-  plugin.init = () => {
+  plugin.init = (options) => {
+    defaults = extendDefaults(defaults, options);
     eventListeners();
   };
 

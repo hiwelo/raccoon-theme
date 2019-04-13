@@ -2,12 +2,18 @@
   &__link {
     display: flex;
     align-items: center;
-    margin-right: $size-full;
+    margin: auto $size-full;
     padding: $size-medium;
-    width: $size-extra;
+    width: $size-extra-plus;
 
-    @media (min-width: $media-tablet) {
+    @media (min-width: $tablet) {
+      margin-left: $size-large;
+      margin-right: 0;
       width: $size-extra-plus;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 0;
     }
   }
 

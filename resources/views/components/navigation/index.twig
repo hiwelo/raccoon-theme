@@ -1,0 +1,7 @@
+<button aria-expanded="false" class="navigation__trigger">Menu</button>
+<nav class="navigation">
+  {% for item in menu.get_items %}
+    <a class="navigation__link {{ item.class }}" href="{{ item.link }}" {% if item.current %} aria-current="page" {% endif %}>{{ item.title }}</a>
+  {% endfor %}
+</nav>
+<!-- .navigation -->
