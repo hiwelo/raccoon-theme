@@ -7,14 +7,14 @@ module.exports = {
    *
    * This is for Webpack that it can handle assets relative path right.
    */
-  assetsPath: "/wp-content/themes/base-camp/",
+  assetsPath: '/wp-content/themes/base-camp/',
 
   /**
    * Define here your dev server url here.
    *
    * This is for Browsersync.
    */
-  // devUrl: 'http://localhost:8080',
+  devUrl: 'https://raccoon.local',
 
   /**
    * You can whitelist selectors to stop purgecss from removing them from your CSS
@@ -22,5 +22,5 @@ module.exports = {
    * whitelist: ['random', 'yep', 'button']
    * In the example, the selectors .random, #yep, button will be left in the final CSS
    */
-  whitelist: []
+  whitelist: [],
 };
