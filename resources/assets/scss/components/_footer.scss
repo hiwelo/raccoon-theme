@@ -1,0 +1,207 @@
+.footer {
+  & {
+    padding: 0;
+    background: $color-raccoon;
+
+    @media (min-width: $media-desktop) {
+      background: transparent;
+    }
+  }
+
+  &:not(&__home) {
+    @media (max-width: $media-desktop - 1) {
+      @supports (clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%)) {
+        & {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            display: block;
+            height: $size-large;
+            content: '';
+            background: $color-raccoon;
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+    }
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: $size-full;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: $size-base;
+    font-style: normal;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__container {
+    @extend .container-alignment;
+    display: flex;
+    flex-direction: column;
+    padding-top: $size-large;
+    padding-bottom: $size-large;
+    background-color: $color-raccoon;
+    color: $color-inverted;
+
+    @media (min-width: $media-desktop) {
+      @supports (clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%)) {
+        & {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            display: block;
+            height: $size-large;
+            content: '';
+            background: $color-raccoon;
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+    }
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $media-laptop) {
+      padding-left: $grid-desktop-unit;
+      padding-right: $grid-desktop-unit;
+    }
+  }
+
+  &__email {
+    @include outline-inverted;
+    color: $color-gray-300;
+    font-size: $font-size-navigation;
+    font-weight: $font-weight-light;
+
+    &:focus,
+    &:hover {
+      color: $color-white;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  &__email-copy {
+    @include outline-inverted;
+    margin-top: $size-small;
+    padding: $size-demi $size-base;
+    background-color: transparent;
+    border: $size-unit solid $color-inverted;
+    color: $color-inverted;
+    font-size: $font-size-small;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:focus,
+    &:hover {
+      background-color: $color-inverted;
+      color: $color-raccoon;
+    }
+
+    @media (min-width: $media-tablet) {
+      margin-left: $size-medium;
+      margin-top: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: $size-full;
+    max-width: 100%;
+    width: auto;
+
+    @media (min-width: $media-laptop) {
+      margin-left: $size-small;
+    }
+  }
+
+  &__network {
+    @include outline-inverted;
+    display: inline-flex;
+    height: $size-full;
+    width: $size-full;
+    background: transparent;
+    color: $color-inverted;
+    transition: border 0.2s ease-in-out;
+
+    &:focus,
+    &:hover {
+      background: $color-inverted;
+      color: $color-raccoon;
+
+      & svg {
+        transform: scale(1.25);
+      }
+    }
+
+    & svg {
+      margin: auto;
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &__networks {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $media-tablet) {
+      margin-left: 0;
+      margin-top: auto;
+    }
+  }
+
+  &__story {
+    color: $color-gray-300;
+    margin-bottom: 1.5em;
+    max-width: $paragraph-footer;
+    font-size: $font-size-footer;
+
+    & > em {
+      color: $color-inverted;
+      font-style: normal;
+    }
+  }
+
+  &__story-container {
+    flex: 1;
+    color: $color-inverted;
+
+    @media (min-width: $media-tablet) {
+      margin-left: $size-extra;
+    }
+  }
+
+  &__story-title {
+    margin: 0 0 $size-medium;
+    font-size: $font-size-subtitle;
+    font-weight: $font-weight-light;
+  }
+}
