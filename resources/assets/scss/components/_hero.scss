@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  color: $color-raccoon;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    content: '';
+    background: $color-raccoon;
+    transition: clip-path 1s ease-in-out, height 1s ease-in-out;
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%)) {
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+    }
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%)) {
+      & {
+        @media (min-width: $media-desktop) {
+          height: $hero-minheight-desktop;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+        }
+      }
+    }
+  }
+
+  &__container {
+    @extend .container;
+    padding-bottom: $size-extra;
+    padding-top: $size-large;
+
+    @media (min-width: $media-tablet) {
+      padding-bottom: $size-extra * 2;
+    }
+
+    @media (min-width: $media-laptop) {
+      margin-left: $size-oversized;
+      padding-left: 0;
+      padding-right: $grid-desktop-unit;
+    }
+
+    @media (min-width: $media-desktop) {
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__salutations {
+    display: block;
+    margin-bottom: $size-medium;
+    color: $color-gray-400;
+    font-size: $font-size-subtitle;
+    font-weight: 200;
+
+    @media (min-width: $media-tablet) {
+      font-size: $font-size-title;
+    }
+
+    @media (min-width: $media-laptop) {
+      font-size: $font-size-hero-intro;
+    }
+
+    & > span:not(:last-child) {
+      padding-right: 0.25em;
+    }
+  }
+
+  &__title {
+    margin: 0 $size-large;
+    max-width: $grid-cols-4;
+    color: $color-white;
+    font-size: $font-size-subtitle;
+    font-weight: 200;
+    line-height: 1.3;
+
+    @media (min-width: $media-tablet) {
+      margin: 0;
+      font-size: $font-size-title;
+    }
+
+    @media (min-width: $media-laptop) {
+      font-size: $font-size-hero-title;
+    }
+
+    & strong {
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+}
+
+.hero__image {
+  margin-top: -9rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+  @media (min-width: $media-tablet) {
+    margin-top: $size-extra * -2;
+  }
+
+  & [class=' gatsby-image-wrapper'],
+  & img {
+    display: block !important;
+    max-width: 100%;
+
+    @media (min-width: $media-desktop) {
+      max-width: 130%;
+    }
+
+    @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  & img {
+    margin-bottom: 0;
+  }
+
+  @supports (clip-path: polygon(0 50%, 100% 0, 100% 100%)) {
+    @media (min-width: $media-desktop) {
+      & {
+        margin-bottom: $size-extra * -3;
+        margin-left: 50%;
+        margin-top: 0;
+        width: 50%;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        overflow: hidden;
+      }
+    }
+  }
+}

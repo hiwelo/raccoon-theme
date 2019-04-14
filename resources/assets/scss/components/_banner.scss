@@ -7,6 +7,15 @@
   background-color: $color-raccoon;
   color: $color-white;
 
+  .home & {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    @media (min-width: $media-tablet) {
+      padding-bottom: $size-extra;
+    }
+  }
+
   @supports (clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%)) {
     & {
       position: relative;
@@ -20,9 +29,13 @@
       top: 100%;
       display: block;
       height: $size-large;
-      content: "";
+      content: '';
       background-color: $color-raccoon;
       clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+
+      .home & {
+        content: none;
+      }
     }
   }
 

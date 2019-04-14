@@ -2,10 +2,12 @@
 @import 'node_modules/bulma/bulma';
 
 @import 'accessibility';
+@import 'fonts';
 @import 'gradients';
 @import 'helpers';
 
 @import 'components/banner';
 @import 'components/branding';
+@import 'components/hero';
 @import 'components/navigation';
 @import 'components/skipto';

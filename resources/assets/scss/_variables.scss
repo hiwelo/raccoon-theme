@@ -48,7 +48,7 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 $hero-image-height: 240px;
-$hero-minheight-desktop: 720px; /* previously 165% */
+$hero-minheight-desktop: 560px; /* previously 165% */
 
 $lineheight-title: 1.15;
 
@@ -78,3 +78,17 @@ $size-xxlarge: 6.4rem;
 $size-extra: 8rem;
 $size-extra-plus: 12rem;
 $size-oversized: 16rem;
+
+$grid-desktop-col: 120px;
+$grid-desktop-gutter: 40px;
+$grid-desktop-unit: ($grid-desktop-col + $grid-desktop-gutter);
+$grid-cols-count: 8;
+
+$grid-cols-1: $grid-desktop-unit;
+$grid-cols-2: ($grid-desktop-unit * 2) - $grid-desktop-gutter;
+$grid-cols-3: ($grid-desktop-unit * 3) - $grid-desktop-gutter;
+$grid-cols-4: ($grid-desktop-unit * 4) - $grid-desktop-gutter;
+$grid-cols-5: ($grid-desktop-unit * 5) - $grid-desktop-gutter;
+$grid-cols-6: ($grid-desktop-unit * 6) - $grid-desktop-gutter;
+$grid-cols-7: ($grid-desktop-unit * 7) - $grid-desktop-gutter;
+$grid-cols-8: ($grid-desktop-unit * $grid-cols-count) - $grid-desktop-gutter;
