@@ -44,6 +44,7 @@
     }
 
     @media (min-width: $media-desktop) {
+      margin-left: auto;
       padding-bottom: 0;
       padding-left: 0;
     }
@@ -94,8 +95,12 @@
 }
 
 .hero__image {
-  margin-top: -9rem;
+  margin-top: -10rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+  @media (min-width: 380px) {
+    margin-top: -9rem;
+  }
 
   @media (min-width: $media-tablet) {
     margin-top: $size-extra * -2;
