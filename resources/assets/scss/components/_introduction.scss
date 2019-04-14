@@ -1,0 +1,63 @@
+/**
+ * Introduction component CSS
+ */
+
+.introduction {
+  @extend .container-6cols;
+  padding-top: $size-extra;
+  padding-bottom: $size-extra;
+
+  @media (min-width: $media-desktop) {
+    // padding-top: 0;
+  }
+
+  &__container {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $media-laptop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $media-desktop) {
+      display: block;
+    }
+
+    & > p {
+      margin: 0 auto;
+      margin-bottom: $size-large;
+      max-width: $paragraph-max-width;
+      padding: 0 $grid-desktop-gutter / 2;
+
+      &:first-child {
+        @supports (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)) {
+          margin-top: $size-large * -1;
+        }
+      }
+
+      @media (min-width: $media-laptop) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 50%;
+
+        &:first-child {
+          width: 100%;
+
+          @supports (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)) {
+            // margin-top: $size-extra * -1;
+          }
+        }
+      }
+
+      @media (min-width: $media-desktop) {
+        margin-bottom: 1.5em;
+        width: $grid-cols-4;
+
+        &:first-child {
+          margin-top: $size-base;
+        }
+      }
+    }
+  }
+}

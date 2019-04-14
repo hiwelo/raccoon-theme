@@ -1,0 +1,32 @@
+.container_legacy {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: $container-size-tablet;
+  z-index: -3;
+
+  @media (min-width: $media-laptop) {
+    width: $container-size-laptop;
+  }
+
+  @media (min-width: $media-desktop) {
+    width: $container-size-desktop;
+  }
+}
+
+.container-6cols {
+  @extend .container_legacy;
+  z-index: 0;
+
+  @media (min-width: $media-desktop) {
+    padding-left: $grid-desktop-unit;
+    padding-right: $grid-desktop-unit;
+  }
+}
+
+.container-alignment {
+  @extend .container_legacy;
+  position: relative;
+  display: block;
+  z-index: 0;
+}
