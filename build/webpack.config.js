@@ -174,23 +174,23 @@ module.exports = {
 
     new ManifestPlugin(),
 
-    new BrowserSyncPlugin(
-      {
-        host: 'raccoon.local',
-        port: 3000,
-        proxy: config.devUrl, // YOUR DEV-SERVER URL
-        files: [
-          './*.php',
-          './resources/views/**/*.twig',
-          './static/css/*.*',
-          './static/js/*.*',
-        ],
-      },
-      {
-        reload: false,
-        injectCss: true,
-      },
-    ),
+    // new BrowserSyncPlugin(
+    //   {
+    //     host: 'raccoon.local',
+    //     port: 3000,
+    //     proxy: config.devUrl, // YOUR DEV-SERVER URL
+    //     files: [
+    //       './*.php',
+    //       './resources/views/**/*.twig',
+    //       './static/css/*.*',
+    //       './static/js/*.*',
+    //     ],
+    //   },
+    //   {
+    //     reload: false,
+    //     injectCss: true,
+    //   },
+    // ),
   ],
 };
 

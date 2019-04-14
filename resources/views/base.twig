@@ -11,25 +11,28 @@
     </div>
   {% endif %}
 
+  {% include "components/skip-to/index.twig" %}
   {% include "components/banner/index.twig" %}
 
-  <section class="section">
-    <div class="container">
-      <div class="columns">
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="columns">
 
-        <div class="column is-7">
-          {% block content %}
-            {{ messages.base.no_content }}
-          {% endblock %}
+          <div class="column is-7">
+            {% block content %}
+              {{ messages.base.no_content }}
+            {% endblock %}
+          </div>
+
+          <aside class="column is-4 is-offset-1">
+            {{ main_sidebar }}
+          </aside>
+
         </div>
-
-        <aside class="column is-4 is-offset-1">
-          {{ main_sidebar }}
-        </aside>
-
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   {{ function('wp_footer') }}</body>
 </html>

@@ -1,0 +1,6 @@
+.skipto {
+  &__link {
+    @include sr-only;
+    @include sr-only-focusable;
+  }
+}

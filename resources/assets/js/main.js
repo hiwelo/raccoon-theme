@@ -1,3 +1,5 @@
-import NavigationScript from './Navigation/index.js';
+import Navigation from './Navigation';
+import AccessibilityScripts from './Accessibility';
 
-NavigationScript.Navigation();
+Navigation.plugin.init();
+AccessibilityScripts.SkipTo.plugin.init();
