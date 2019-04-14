@@ -1,5 +1,7 @@
 vendor
 node_modules
+!node_modules/@fortawesome/fontawesome-pro/css/all.min.css
+!node_modules/@fortawesome/fontawesome-pro/js/all.min.js
 .idea
 .vscode
 .env
