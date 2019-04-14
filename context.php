@@ -17,3 +17,12 @@ add_filter('timber_context', function ($context) {
 
     return $context;
 });
+
+/**
+ * Adding primary navigation in the Timber context
+ */
+add_filter('timber_context', function ($context) {
+    $context['navigation'] = new \Timber\Menu('primary_navigation');
+
+    return $context;
+});
