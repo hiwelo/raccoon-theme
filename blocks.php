@@ -32,6 +32,20 @@ $blocks = [
             'multiple' => false,
         ],
         'keywords' => ['home', 'introduction'],
+    ], [
+        'name' => 'specialties',
+        'title' => __('Specialties'),
+        'description' => __('List of specialties'),
+        'render_template' => 'blocks/content-specialties.php',
+        'category' => 'widgets',
+        'icon' => 'pressthis',
+        'mode' => 'preview',
+        'supports' => [
+            'align' => false,
+            'mode' => false,
+            'multiple' => false,
+        ],
+        'keywords' => ['specialties'],
     ],
 ];
 

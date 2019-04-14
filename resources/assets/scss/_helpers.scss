@@ -15,20 +15,35 @@ body {
 a {
   background-color: transparent;
   color: $color-raccoon;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   text-decoration: underline;
   transition: color 0.2s ease-in-out;
 
   &:focus,
   &:hover {
     color: $color-raccoon-blue;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
   }
 
   &:focus {
     outline: $outline-default;
     outline-offset: $size-double;
   }
+}
+
+h2,
+h3,
+h4 {
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: $font-size-subtitle;
+}
+
+h3 {
+  font-size: $font-size-h3-like;
 }
 
 /**

@@ -1,0 +1,41 @@
+<footer class="footer" role="contentinfo">
+  <div class="footer__container">
+    <div class="footer__branding">
+      <img class="footer__logo" src="{{theme.link}}/resources/assets/images/raccoon-logo-inverted.svg" alt="{{ site.name }}">
+      <ul class="footer__networks">
+        {% for social_media in social_networks %}
+          <li>
+            <a class="footer__network" href="{{ social_media.target }}" rel=" noopener noreferrer" target="_blank">
+              <span class="fab fa-{{ social_media.icon }}"></span>
+              <span class="sr-only">{{ social_media.label }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__story-container">
+      <h6 class="footer__story-title">Let's discuss together?</h6>
+      <p class="footer__story">
+        I love
+        <em>rooibos tea</em>,
+        <em>oat-milk latte</em>,
+        <em lang="sv">kanelbullar</em>
+        and discussing
+        <em>how to make the Web a better place</em>.
+      </p>
+      <p class="footer__story">
+        So, whether you are
+        <em>a conference or meetup organiser</em>,
+        <em>a project maker</em>
+        or just interested by my profile,
+        <em>let's have a chat!</em>
+      </p>
+      <p class="footer__contact">
+        <a class="footer__email" href="mailto:hello@raccoon.studio">
+          hello@raccoon.studio
+        </a>
+        {# <CopyToClipboard text="hello@raccoon.studio"><button class="footer__email-copy">Copy email</button></CopyToClipboard> #}
+      </p>
+    </div>
+  </div>
+</footer>

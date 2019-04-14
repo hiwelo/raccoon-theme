@@ -3,8 +3,6 @@
 {% include 'components/_head.twig' %}
 
 <body class="{{ body_class }}">
-  <div class="pageloader is-active"></div>
-
   {% if not in_production %}
     <div class="current-template-file-name">
       {{ current_template_file }}
@@ -20,5 +18,9 @@
     {% endblock %}
   </main>
 
-  {{ function('wp_footer') }}</body>
+  {% include "components/footer/index.twig" %}
+
+  <script src="{{theme.link}}/node_modules/@fortawesome/fontawesome-pro/js/all.min.js"></script>
+  {{ function('wp_footer') }}
+</body>
 </html>
