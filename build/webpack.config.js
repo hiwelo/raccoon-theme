@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const glob = require('glob');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
@@ -51,7 +50,7 @@ module.exports = {
     styles: './resources/assets/scss/main.scss',
     login: './resources/assets/sass/login.sass',
     admin: './resources/assets/sass/admin.sass',
-    vendor: ['jquery', 'vue'],
+    vendor: ['jquery'],
   },
   output: {
     path: path.resolve(__dirname, '../static/'),
@@ -73,13 +72,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['vue-style-loader', extractCss, cssLoader, 'postcss-loader'],
+        use: [extractCss, cssLoader, 'postcss-loader'],
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
-          'vue-style-loader',
           extractCss,
           cssLoader,
           {
@@ -94,7 +92,6 @@ module.exports = {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "shared-with-vue";',
               sourceMap: true,
             },
           },
@@ -104,7 +101,6 @@ module.exports = {
         test: /\.sass$/,
         exclude: /node_modules/,
         use: [
-          'vue-style-loader',
           extractCss,
           cssLoader,
           {
@@ -120,7 +116,6 @@ module.exports = {
               includePaths: [
                 path.resolve(__dirname, '../resources/assets/sass'),
               ],
-              data: '@import "shared-with-vue";',
               sourceMap: true,
             },
           },
@@ -160,7 +155,7 @@ module.exports = {
     alias: {
       images: path.join(__dirname, '../resources/assets/images'),
     },
-    extensions: ['*', '.js', '.vue', '.json'],
+    extensions: ['*', '.js', '.json'],
   },
 
   plugins: [

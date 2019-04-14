@@ -1,11 +1,10 @@
-@import "variables";
-@import "node_modules/bulma/bulma";
-@import "node_modules/font-awesome/scss/font-awesome";
+@import 'variables';
+@import 'node_modules/bulma/bulma';
 
-@import "accessibility";
-@import "gradients";
-@import "helpers";
+@import 'accessibility';
+@import 'gradients';
+@import 'helpers';
 
-@import "components/banner";
-@import "components/branding";
-@import "components/navigation";
+@import 'components/banner';
+@import 'components/branding';
+@import 'components/navigation';

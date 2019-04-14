@@ -4,7 +4,5 @@
   "scripts.js": "js/scripts.js",
   "styles.css": "css/styles.css",
   "vendor.js": "js/vendor.js",
-  "fonts/main.scss": "fonts/fontawesome-webfont.fee66e7.woff",
-  "images/login.sass": "images/base-camp-logo.png",
-  "images/main.scss": "images/fontawesome-webfont.svg"
+  "images/login.sass": "images/base-camp-logo.png"
 }
