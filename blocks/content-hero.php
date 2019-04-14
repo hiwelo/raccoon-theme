@@ -19,9 +19,7 @@ $heroImage = get_field('image');
                 if (have_rows('salutations')) :
                     while (have_rows('salutations')) : the_row();
                         ?>
-                        <span lang="<?php the_sub_field('language') ?>">
-                            <?php the_sub_field('salutation'); ?>
-                        </span>
+                        <span lang="<?php the_sub_field('language') ?>"><?php the_sub_field('salutation'); ?></span>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </span>
