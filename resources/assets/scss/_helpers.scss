@@ -12,6 +12,25 @@ body {
   line-height: 1.5;
 }
 
+a {
+  background-color: transparent;
+  color: $color-raccoon;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+
+  &:focus,
+  &:hover {
+    color: $color-raccoon-blue;
+    font-weight: 600;
+  }
+
+  &:focus {
+    outline: $outline-default;
+    outline-offset: $size-double;
+  }
+}
+
 /**
  * Style for the dev helper indicating what is the current template
  */

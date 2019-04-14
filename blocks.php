@@ -18,6 +18,20 @@ $blocks = [
             'multiple' => false,
         ],
         'keywords' => ['home', 'hero'],
+    ], [
+        'name' => 'home-introduction',
+        'title' => __('Home Introduction'),
+        'description' => __('Introduction used on the homepage'),
+        'render_template' => 'blocks/content-home-intro.php',
+        'category' => 'widgets',
+        'icon' => 'admin-home',
+        'mode' => 'preview',
+        'supports' => [
+            'align' => false,
+            'mode' => false,
+            'multiple' => false,
+        ],
+        'keywords' => ['home', 'introduction'],
     ],
 ];
 
