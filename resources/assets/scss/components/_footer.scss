@@ -1,5 +1,6 @@
 .footer {
   & {
+    margin-top: auto;
     padding: 0;
     background: $color-raccoon;
 
@@ -143,6 +144,7 @@
     @include outline-inverted;
     display: inline-flex;
     height: $size-full;
+    overflow: hidden;
     width: $size-full;
     background: transparent;
     color: $color-inverted;

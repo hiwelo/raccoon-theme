@@ -1,0 +1,38 @@
+/**
+ * Home view specific SCSS
+ */
+
+.home {
+  & main,
+  & [id='main'],
+  & [role='main'] {
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      top: 0;
+      width: $container-size-tablet;
+      content: '';
+      background-color: $color-gray-50;
+      transform: translateX(-50%);
+      z-index: -1;
+
+      @media (min-width: $media-laptop) {
+        width: $container-size-laptop;
+      }
+
+      @media (min-width: $media-desktop) {
+        width: $container-size-desktop;
+      }
+    }
+  }
+
+  & .footer,
+  & [role='contentinfo'] {
+    z-index: 1;
+  }
+}
