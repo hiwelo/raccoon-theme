@@ -87,6 +87,10 @@
       font-size: $font-size-hero-title;
     }
 
+    & span {
+      background-color: $color-raccoon;
+    }
+
     & strong {
       color: inherit;
       font-weight: 500;
