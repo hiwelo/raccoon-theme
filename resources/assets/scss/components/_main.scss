@@ -1,0 +1,24 @@
+/**
+ * Main markup SCSS
+ */
+
+main,
+[id='main'],
+[role='main'] {
+  background-color: $color-gray-50;
+
+  body:not(.home) & {
+    flex: 1;
+    margin: $size-larger * -1 auto 0;
+    padding: $size-larger $size-medium;
+    width: $container-size-tablet;
+
+    @media (min-width: $media-laptop) {
+      width: $container-size-laptop;
+    }
+
+    @media (min-width: $media-desktop) {
+      width: $container-size-desktop;
+    }
+  }
+}
